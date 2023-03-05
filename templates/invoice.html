@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Invoice</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/invoice.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container mt-5 mb-5">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="upper p-4">
+                    <div class="d-flex justify-content-between">
+                        <div class="amount"> <span class="text-primary font-weight-bold">Sell directly to opendoor</span>
+                            <h4>$200,000</h4> <small>Thursday,September 24th</small>
+                        </div>
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="add"> <span class="font-weight-bold d-block">8556 W Purdue Ave</span> <span class="font-weight-bold d-block">Peoria, AZ 98984</span> <small>3 bed2.5 both,2.343 ft'</small> </div> <img src="https://i.imgur.com/HKne8Oc.jpg" width="60" class="rounded-circle">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="delivery">
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex flex-row align-items-center"> <i class="fa fa-check-circle-o"></i> <span class="ml-2">Estimated days to find a buyer</span> </div> <span class="font-weight-bold">0 Days</span>
+                        </div>
+                    </div>
+                    <div class="transaction mt-2">
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex flex-row align-items-center"> <i class="fa fa-check-circle-o"></i> <span class="ml-2">Average days to close transation</span> </div> <span class="font-weight-bold"> 0-30 days</span>
+                        </div>
+                    </div>
+                    <div class="transaction mt-2">
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex flex-row align-items-center"> <i class="fa fa-check-circle-o"></i> <span class="ml-2">Average number of showing</span> </div> <span class="font-weight-bold">0 Showings</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="transaction mt-2">
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex flex-row align-items-center"> <i class="fa fa-check-circle-o"></i> <span class="ml-2">Offer/contract price</span> </div> <span class="font-weight-bold">$200,00</span>
+                        </div>
+                    </div>
+                    <div class="transaction mt-2">
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex flex-row align-items-center"> <i class="fa fa-check-circle-o"></i> <span class="ml-2">Opendoor service charge</span> </div> <span class="font-weight-bold">8% - $16000</span>
+                        </div>
+                    </div>
+                    <div class="transaction mt-2">
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex flex-row align-items-center"> <i class="fa fa-check-circle-o"></i> <span class="ml-2">Closing costs </span> </div> <span class="font-weight-bold">0.8% - $15,00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lower bg-primary p-4 py-5 text-white d-flex justify-content-between">
+                    <div class="d-flex flex-column"> <span>Cost including service charges</span> <small>This nuber may change depending on replair and your home conditions</small> </div>
+                    <h3>$345,642</h3>
+                </div>
+                <div class="btn justify-content-center align-content-center">
+                    <form class="d-flex">
+                        <button class="btn btn-outline-dark" type="submit">
+                            <i class="bi-cart-fill me-1"></i>
+                            <a href="{% url 'my-index' %}">Continue shoping</a>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
