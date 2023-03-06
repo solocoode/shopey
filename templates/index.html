@@ -31,15 +31,22 @@
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                     <ul class="navbar-nav mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">All Products</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                                <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
-                            </ul>
-                        </li>
+                      <form class="d-flex">
+                        {% for d in data %}
+                        <button class="btn btn-outline-dark" type="submit">
+                            <span class="badge bg-dark text-white ms-1 rounded-pill">Welcome {{d.name}}</span>
+                        </button>
+                        {% endfor %}
+                      </form>
+                          <!-- <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <li><a class="dropdown-item" href="#!">All Products</a></li>
+                                  <li><hr class="dropdown-divider" /></li>
+                                  <li><a class="dropdown-item" href="#!">Popular Items</a></li>
+                                  <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                              </ul>
+                          </li> -->
                     </ul>
                     <form class="d-flex">
                         <button class="btn btn-outline-dark" type="submit">
@@ -49,8 +56,8 @@
                         </button>
                     </form>
                     <ul class="navbar-nav  mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'my-signup' %}">Register</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'my-login' %}">Sign in</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'handlesignup' %}">Register</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'handlelogin' %}">Sign in</a></li>
                     </ul>
                 </div>
             </div>

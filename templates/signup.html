@@ -15,14 +15,14 @@
             <ul>
                 <li><span class="blue-logo"></span>Shop at SHOPEY<span class="blue">.</span></li>
                 <li class="gray"><a href="{% url 'my-index' %}">Home</a></li>
-                <li class="gray"><a href="{% url 'my-login' %}">Login</a></li>
+                <li class="gray"><a href="{% url 'handlelogin' %}">Login</a></li>
             </ul>
         </div>
         <div class="hero">
             <div class="text">
                 <p class="gray">START SHOPPING FOR FREE</p>
                 <h1>Create new account <span class="blue">.</span></h1>
-                <p class="gray">Already A Member ? <span class="blue"><a href="{% url 'my-login' %}">Log in</a></span></p>
+                <p class="gray">Already A Member ? <span class="blue"><a href="{% url 'handlelogin' %}">Log in</a></span></p>
             </div>
             <div class="form">
 
@@ -93,7 +93,7 @@
 
                 <div class="buttons">
                     <!-- <button class="btn gray-btn">Change method</button> -->
-                    <button class="btn blue-btn"><a href="{% url 'my-index' %}">Create account</a></button>
+                    <button class="btn blue-btn " type="submit"><a href="{% url 'my-index' %}">Create account</a></button>
                 </div>
             </div>
         </div>
