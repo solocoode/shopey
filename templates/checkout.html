@@ -1,116 +1,69 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Checkout</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/checkout.css' %}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-</head>
-<body>
-<div class="container">
-    <div class="card">
-        <div class="payment-details">
-            <h3>Payment Details</h3>
-            <p>Complete your purchase by providing your payment details.</p>
-        </div>
-        <div class="input-text">
-            <input type="text" placeholder="luke@skywalker.com">
-            <span>Email</span>
-        </div>
-        <div class="input-text">
-            <input type="text"  placeholder="0000 0000 0000 0000" data-slots="0" data-accept="\d" >
-            <span>Card Details</span>
-        </div>
-        <div class="input-text-cvv">
-            <input type="text" placeholder="mm/yyyy" data-slots="my">
-            <!--<span>Card Details</span>-->
-        </div>
-         <div class="input-text-cvv cvv">
-            <input type="text" placeholder="000" data-slots="0" data-accept="\d" size="3" >
-            <!--<span>Card Details</span>-->
-        </div>
-        <div class="input-text">
-            <input type="text" placeholder="Username">
-            <span>Card Holder name</span>
-        </div>
-        <div class="billing">
-            <span>Billing Address</span>
-            <select>
-                <option>Select Country</option>
-                <option>United States</option>
-                <option>India</option>
-                <option>England</option>
-                <option>France</option>
-                <option>Germany</option>
-                <option>Japan</option>
-                <option>China</option>
-                <option>Italy</option>
-                <option>Russia</option>
-            </select>
-            <div class="zip-state">
-                <div class="zip">
-                    <input type="text" placeholder="ZIP">
-                </div>
-                <div class="state">
-                    <select>
-                           <option>Select State</option>
-                           <option>New York</option>
-                           <option>New Delhi</option>
-                           <option>London</option>
-                           <option>Paris</option>
-                           <option>Berlin</option>
-                           <option>Tokyo</option>
-                           <option>Bejing</option>
-                           <option>Rome</option>
-                           <option>Mosco</option>
-                    </select>
-                </div>
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+     <div class="row">
+		<div class="col-lg-6">
+			<div class="box-element" id="form-wrapper">
+				<form id="form">
+					<div id="user-info">
+						<div class="form-field">
+							<input required class="form-control" type="text" name="name" placeholder="Name..">
+						</div>
+						<div class="form-field">
+							<input required class="form-control" type="email" name="email" placeholder="Email..">
+						</div>
+					</div>
+					
+					<div id="shipping-info">
+						<hr>
+						<p>Shipping Information:</p>
+						<hr>
+						<div class="form-field">
+							<input class="form-control" type="text" name="address" placeholder="Address..">
+						</div>
+						<div class="form-field">
+							<input class="form-control" type="text" name="city" placeholder="City..">
+						</div>
+						<div class="form-field">
+							<input class="form-control" type="text" name="state" placeholder="State..">
+						</div>
+						<div class="form-field">
+							<input class="form-control" type="text" name="zipcode" placeholder="Zip code..">
+						</div>
+						<div class="form-field">
+							<input class="form-control" type="text" name="country" placeholder="Zip code..">
+						</div>
+					</div>
 
-            </div>
-        </div>
-        <div class="input-text">
-            <input type="text" placeholder="GB0124589">
-            <span>Vat Number</span>
-        </div>
-        <div class="input-text">
-            <input type="text" placeholder="BLACKWEDNESDAY">
-            <span>Discount code</span>
-        </div>
-        <div class="summary">
-            <div class="text-data">
-                <p>Subtotal</p>
-                <p>Discount</p>
-                <p>VAT(20%)</p>
-                <h5>Total</h5>
-            </div>
-            <div class="numerical-data">
-                <p>$19.00</p>
-                <p>$5.00</p>
-                <p>$2.80</p>
-                <h5>$16.80</h5>
-            </div>
-        </div>
-        <div class="pay">
-            <button><a href="{% url 'my-invoice' %}">Pay</a></button>
-        </div>
-        <div class="secure">
-            <i class="fa fa-lock"></i>
-            <p> Payments are secured and encrypted</p>
-        </div>
-        <div class="last">
-            <p>Powered by Orman Clark</p>
-            <a href="#"> Terms </a>
-            <a href="#"> Privacy </a>
-        </div>
+					<hr>
+					<input id="form-button" class="btn btn-success btn-block" type="submit" value="Continue">
+				</form>
+			</div>
 
-    </div>
+			<br>
+			<div class="box-element hidden" id="payment-info">
+				<small>Paypal Options</small>
+			</div>
+			
+		</div>
 
-</div>
-
-</body>
-</html>
+		<div class="col-lg-6">
+			<div class="box-element">
+				<a  class="btn btn-outline-dark" href="{% url 'cart' %}">&#x2190; Back to Cart</a>
+				<hr>
+				<h3>Order Summary</h3>
+				<hr>
+				{% for item in items %}
+				<div class="cart-row">
+					<div style="flex:2"><img class="row-image" src="{{item.product.imageURL}}"></div>
+					<div style="flex:2"><p>{{item.product.name}}</p></div>
+					<div style="flex:1"><p>${{item.product.price|floatformat:2}}</p></div>
+					<div style="flex:1"><p>x{{item.quantity}}</p></div>
+				</div>
+				{% endfor %}
+				<h5>Items:   {{order.get_cart_items}}</h5>
+				<h5>Total:   ${{order.get_cart_total|floatformat:2}}</h5>
+			</div>
+		</div>
+	</div>
+{% endblock content %}

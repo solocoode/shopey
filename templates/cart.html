@@ -1,96 +1,52 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cart</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/cart.css' %}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-</head>
-<body>
-<div class="container mt-5 mb-5">
-            <div class="d-flex justify-content-center row">
-                <div class="col-md-8">
-                    <div class="p-2">
-                        <h4>Shopping cart</h4>
-                        <div class="d-flex flex-row align-items-center pull-right"><span class="mr-1">Sort by:</span><span class="mr-1 font-weight-bold">Price</span><i class="fa fa-angle-down"></i></div>
-                    </div>
-                    <div class="d-flex flex-row justify-content-between align-items-center p-2 bg-white mt-4 px-3 rounded">
-                        <div class="mr-1"><img class="rounded" src="https://i.imgur.com/XiFJkhI.jpg" width="70"></div>
-                        <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold">Basic T-shirt</span>
-                            <div class="d-flex flex-row product-desc">
-                                <div class="size mr-1"><span class="text-grey">Size:</span><span class="font-weight-bold">&nbsp;M</span></div>
-                                <div class="color"><span class="text-grey">Color:</span><span class="font-weight-bold">&nbsp;Grey</span></div>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-row align-items-center qty"><i class="fa fa-minus text-danger"></i>
-                            <h5 class="text-grey mt-1 mr-1 ml-1">2</h5><i class="fa fa-plus text-success"></i></div>
-                        <div>
-                            <h5 class="text-grey">$20.00</h5>
-                        </div>
-                        <div class="d-flex align-items-center"><i class="fa fa-trash mb-1 text-danger"></i></div>
-                    </div>
-                    <div class="d-flex flex-row justify-content-between align-items-center p-2 bg-white mt-4 px-3 rounded">
-                        <div class="mr-1"><img class="rounded" src="https://i.imgur.com/XiFJkhI.jpg" width="70"></div>
-                        <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold">Basic T-shirt</span>
-                            <div class="d-flex flex-row product-desc">
-                                <div class="size mr-1"><span class="text-grey">Size:</span><span class="font-weight-bold">&nbsp;M</span></div>
-                                <div class="color"><span class="text-grey">Color:</span><span class="font-weight-bold">&nbsp;Grey</span></div>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-row align-items-center qty"><i class="fa fa-minus text-danger"></i>
-                            <h5 class="text-grey mt-1 mr-1 ml-1">2</h5><i class="fa fa-plus text-success"></i></div>
-                        <div>
-                            <h5 class="text-grey">$20.00</h5>
-                        </div>
-                        <div class="d-flex align-items-center"><i class="fa fa-trash mb-1 text-danger"></i></div>
-                    </div>
-                    <div class="d-flex flex-row justify-content-between align-items-center p-2 bg-white mt-4 px-3 rounded">
-                        <div class="mr-1"><img class="rounded" src="https://i.imgur.com/XiFJkhI.jpg" width="70"></div>
-                        <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold">Basic T-shirt</span>
-                            <div class="d-flex flex-row product-desc">
-                                <div class="size mr-1"><span class="text-grey">Size:</span><span class="font-weight-bold">&nbsp;M</span></div>
-                                <div class="color"><span class="text-grey">Color:</span><span class="font-weight-bold">&nbsp;Grey</span></div>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-row align-items-center qty"><i class="fa fa-minus text-danger"></i>
-                            <h5 class="text-grey mt-1 mr-1 ml-1">2</h5><i class="fa fa-plus text-success"></i></div>
-                        <div>
-                            <h5 class="text-grey">$20.00</h5>
-                        </div>
-                        <div class="d-flex align-items-center"><i class="fa fa-trash mb-1 text-danger"></i></div>
-                    </div>
-                    <div class="d-flex flex-row justify-content-between align-items-center p-2 bg-white mt-4 px-3 rounded">
-                        <div class="mr-1"><img class="rounded" src="https://i.imgur.com/XiFJkhI.jpg" width="70"></div>
-                        <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold">Basic T-shirt</span>
-                            <div class="d-flex flex-row product-desc">
-                                <div class="size mr-1"><span class="text-grey">Size:</span><span class="font-weight-bold">&nbsp;M</span></div>
-                                <div class="color"><span class="text-grey">Color:</span><span class="font-weight-bold">&nbsp;Grey</span></div>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-row align-items-center qty"><i class="fa fa-minus text-danger"></i>
-                            <h5 class="text-grey mt-1 mr-1 ml-1">2</h5><i class="fa fa-plus text-success"></i></div>
-                        <div>
-                            <h5 class="text-grey">$20.00</h5>
-                        </div>
-                        <div class="d-flex align-items-center"><i class="fa fa-trash mb-1 text-danger"></i></div>
-                    </div>
-                    <!-- <div class="d-flex flex-row align-items-center mt-3 p-2 bg-white rounded">
-                        <input type="text" class="form-control border-0 gift-card" placeholder="discount code/gift card">
-                        <button class="btn btn-outline-warning btn-sm ml-2" type="button">Apply</button>
-                    </div> -->
-                    <div class="d-flex flex-row align-items-center mt-3 p-2 bg-white rounded">
-                        <button class="btn btn-warning btn-block btn-lg ml-2 pay-button " type="button"><a href="{% url 'my-checkout' %}" class="text-black">Proceed to Pay</a></button>
-                    </div>
-                </div>
-            </div>
-        </div>
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="box-element">
 
+				<a  class="btn btn-outline-dark" href="{% url 'store' %}">&#x2190; Continue Shopping</a>
 
+				<br>
+				<br>
+				<table class="table">
+					<tr>
+						<th><h5>Items: <strong>{{order.get_cart_items}}</strong></h5></th>
+						<th><h5>Total:<strong> ${{order.get_cart_total|floatformat:2}}</strong></h5></th>
+						<th>
+							<a  style="float:right; margin:5px;" class="btn btn-success" href="{% url 'checkout' %}">Checkout</a>
+						</th>
+					</tr>
+				</table>
 
-</body>
-</html>
+			</div>
+
+			<br>
+			<div class="box-element">
+				<div class="cart-row">
+					<div style="flex:2"></div>
+					<div style="flex:2"><strong>Item</strong></div>
+					<div style="flex:1"><strong>Price</strong></div>
+					<div style="flex:1"><strong>Quantity</strong></div>
+					<div style="flex:1"><strong>Total</strong></div>
+				</div>
+				{% for item in items %}
+				<div class="cart-row">
+					<div style="flex:2"><img class="row-image" src="{{item.product.imageURL}}"></div>
+					<div style="flex:2"><p>{{item.product.name}}</p></div>
+					<div style="flex:1"><p>${{item.product.price|floatformat:2}}</p></div>
+					<div style="flex:1">
+						<p class="quantity">{{item.quantity}}</p>
+						<div class="quantity">
+							<img class="chg-quantity" src="{% static  'images/arrow-up.png' %}">
+					
+							<img class="chg-quantity" src="{% static  'images/arrow-down.png' %}">
+						</div>
+					</div>
+					<div style="flex:1"><p>${{item.get_total|floatformat:2}}</p></div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+{% endblock content %}
